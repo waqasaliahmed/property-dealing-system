@@ -1,0 +1,332 @@
+/* ==========================================
+   ADD PROPERTY - Clean Form Design
+   ========================================== */
+
+.add-property-container {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 1.5rem 0 3rem;
+}
+
+.add-property-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Header ---- */
+.add-property-header {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.add-property-header h1 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.add-property-header p {
+  color: var(--text-secondary);
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+}
+
+/* ---- Form Card ---- */
+.form-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  margin-bottom: 1.25rem;
+}
+
+.form-section-title {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-section-title:first-child {
+  margin-top: 0;
+}
+
+/* ---- Form Elements ---- */
+.add-property-container .form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.add-property-container .form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.required::after {
+  content: '*';
+  color: var(--danger);
+  margin-left: 2px;
+}
+
+.add-property-container .form-control {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: var(--transition);
+  background: white;
+}
+
+.add-property-container .form-control:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+
+.add-property-container .form-control.error {
+  border-color: var(--danger);
+}
+
+.add-property-container .form-control.error:focus {
+  box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
+}
+
+.add-property-container textarea.form-control {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.field-error {
+  display: block;
+  color: var(--danger);
+  font-size: 0.78rem;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.form-group.has-error label {
+  color: var(--danger);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ---- Image Upload ---- */
+.image-input-wrapper {
+  padding: 1.5rem;
+  border: 2px dashed var(--primary-light);
+  border-radius: var(--radius-md);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  background: #eff6ff;
+}
+
+.image-input-wrapper:hover {
+  border-color: var(--primary);
+  background: #dbeafe;
+}
+
+.image-input-wrapper input[type="file"] {
+  display: none;
+}
+
+.image-input-label {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.image-input-label i,
+.image-input-label div:first-child {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.image-input-hint {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.image-count {
+  color: var(--success);
+  font-weight: 700;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ---- Actions ---- */
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.form-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form-btn.btn-submit {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(30,64,175,0.2);
+}
+
+.form-btn.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(30,64,175,0.3);
+}
+
+.form-btn.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-btn.btn-cancel {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.form-btn.btn-cancel:hover:not(:disabled) {
+  background: var(--border);
+}
+
+/* ---- Alerts ---- */
+.add-property-container .alert {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.add-property-container .alert-danger {
+  background: #fef2f2;
+  border-left-color: var(--danger);
+  color: #991b1b;
+}
+
+.add-property-container .alert-success {
+  background: #ecfdf5;
+  border-left-color: var(--success);
+  color: #065f46;
+}
+
+.add-property-container .btn-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  padding: 0;
+  margin-left: auto;
+  box-shadow: none;
+}
+
+.add-property-container .btn-close:hover {
+  opacity: 1;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+  .add-property-form {
+    padding: 0 1rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-btn {
+    width: 100%;
+  }
+
+  .add-property-header h1 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-property-container {
+    padding: 0.75rem 0 2rem;
+  }
+
+  .add-property-form {
+    padding: 0 0.75rem;
+  }
+
+  .form-card {
+    padding: 1rem;
+  }
+
+  .add-property-header {
+    padding: 1rem;
+  }
+
+  .add-property-header h1 {
+    font-size: 1.1rem;
+  }
+}
